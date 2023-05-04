@@ -1,7 +1,7 @@
 package PaqGroupName;
 public class Hub {
     Container[][] contIDs;
-    private Container[] containers;
+    Container[] containers;
     Hub() {
         this.contIDs = new Container[10][12];
         for(int i = 0; i < 10; i++) {

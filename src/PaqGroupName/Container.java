@@ -67,4 +67,14 @@ public class Container {
     public void setInspected(boolean inspected) {
         this.inspected = inspected;
     }
+    public String checkWeight(int weight, Hub Hub){
+        for(int i = 0; i < 10; i++) {
+            for(int j = 0; j < 12; j++) {
+        if(this.weight<=weight){
+            inspected=true;
+        return this.ID+" "+this.sender+" "+this.weight+" "+this.inspected;
+        }
+            }
+        }
+    return null;}
 }

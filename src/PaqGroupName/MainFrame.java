@@ -1,3 +1,4 @@
+
 package PaqGroupName;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -53,20 +54,6 @@ public class MainFrame {
                     cont.setWeight(Integer.parseInt(weightTextField.getText()));
                 } catch (NumberFormatException ex) {
                     JOptionPane.showMessageDialog(mainPanel, "Please enter valid integer values for ID and weight.", "Invalid Input", JOptionPane.ERROR_MESSAGE);
-                    return;
-                }
-                try {
-                    int id = Integer.parseInt(idTextField.getText());
-                    if (port.hub1.checkDuplicateID(id) || port.hub2.checkDuplicateID(id) || port.hub3.checkDuplicateID(id)) {
-                        throw new IllegalArgumentException("ID already exists in the port.");
-                    }
-                    cont.setID(id);
-                    cont.setWeight(Integer.parseInt(weightTextField.getText()));
-                } catch (NumberFormatException ex) {
-                    JOptionPane.showMessageDialog(mainPanel, "Please enter valid integer values for ID and weight.", "Invalid Input", JOptionPane.ERROR_MESSAGE);
-                    return;
-                } catch (IllegalArgumentException ex) {
-                    JOptionPane.showMessageDialog(mainPanel, ex.getMessage(), "Invalid Input", JOptionPane.ERROR_MESSAGE);
                     return;
                 }
                 int which = 1;
