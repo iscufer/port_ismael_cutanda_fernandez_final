@@ -4,6 +4,5 @@ public class Port {
     Hub hub2 = new Hub();
     Hub hub3 = new Hub();
     public Port() {
-
     }
 }

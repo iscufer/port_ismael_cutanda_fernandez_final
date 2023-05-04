@@ -1,4 +1,4 @@
-
+// Ismael Cutanda Fernández
 package PaqGroupName;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -39,6 +39,7 @@ public class MainFrame {
     private JRadioButton hub1RadioButton;
     private JRadioButton hub2RadioButton;
     private JRadioButton hub3RadioButton;
+    private JButton checkWeightButton;
     private JLabel imageLabel;
     Port port = new Port();
     int k = 1;
@@ -126,6 +127,21 @@ public class MainFrame {
                 if (k == 3){
                     port.hub3.removeContFrom(Integer.parseInt(unpileFromTextField.getText()));
                     stateTextArea.setText("HUB 3\n"+port.hub3.hubToString());
+                }
+            }
+        });
+        checkWeightButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Container cont = new Container();
+                if(k==1){
+                    cont.checkWeight(Integer.parseInt(weightTextField.getText()), port.hub1);
+                }
+                if(k==2){
+                    cont.checkWeight(Integer.parseInt(weightTextField.getText()), port.hub2);
+                }
+                if(k==3){
+                    cont.checkWeight(Integer.parseInt(weightTextField.getText()), port.hub3);
                 }
             }
         });
